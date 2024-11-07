@@ -1,15 +1,15 @@
-page 50023 "PTE_Reason Code"
+page 50030 "PTE_QA Instruction Group"
 {
-    APIGroup = 'isomo';
+    APIGroup = 'apicase';
     APIPublisher = 'ninealtitudes';
     APIVersion = 'v1.0';
     ApplicationArea = All;
-    Caption = 'pteReasonCode';
+    Caption = 'QA Instruction Group';
     DelayedInsert = true;
-    EntityName = 'reasonCode';
-    EntitySetName = 'reasonCodes';
+    EntityName = 'instructionGroup';
+    EntitySetName = 'instructionGroups';
     PageType = API;
-    SourceTable = "Reason Code";
+    SourceTable = "NALQA Instruction Group";
     ODataKeyFields = SystemId;
 
     layout
@@ -18,7 +18,7 @@ page 50023 "PTE_Reason Code"
         {
             repeater(General)
             {
-                field(reasonCodeSystemId; Rec.SystemId)
+                field(instructionGroupSystemId; Rec.SystemId)
                 {
                     Caption = 'SystemId';
                 }

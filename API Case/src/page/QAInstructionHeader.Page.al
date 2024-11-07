@@ -1,6 +1,6 @@
 page 50033 "PTE_QA Instruction Header "
 {
-    APIGroup = 'isomo';
+    APIGroup = 'apicase';
     APIPublisher = 'ninealtitudes';
     APIVersion = 'v1.0';
     ApplicationArea = All;

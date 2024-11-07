@@ -1,6 +1,6 @@
 page 50037 "PTE_QA Measure Line"
 {
-    APIGroup = 'isomo';
+    APIGroup = 'apicase';
     APIPublisher = 'ninealtitudes';
     APIVersion = 'v1.0';
     ApplicationArea = All;
