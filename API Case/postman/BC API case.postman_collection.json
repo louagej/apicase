@@ -1,0 +1,438 @@
+{
+	"info": {
+		"_postman_id": "0b2f010e-baf8-433e-88af-2dac49b58a04",
+		"name": "BC API case",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "574045",
+		"_collection_link": "https://ninealtitudesbe.postman.co/workspace/API-Case~60f4ea01-4d69-4412-a31e-8a8fee4798cd/collection/574045-0b2f010e-baf8-433e-88af-2dac49b58a04?action=share&source=collection_link&creator=574045"
+	},
+	"item": [
+		{
+			"name": "Companies",
+			"item": [
+				{
+					"name": "Companies",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Response status code is 200\", function () {",
+									"    pm.expect(pm.response.code).to.equal(200);",
+									"    const responseData = pm.response.json();",
+									"    pm.expect(responseData.value).to.be.an('array');",
+									"",
+									"    pm.response.json().value.forEach(function(company) {",
+									"        if (company.name === \"CRONUS BE\") {",
+									"            pm.environment.set(\"companyId\", company.id);",
+									"            pm.environment.set(\"companyName\", company.name);",
+									"        }",
+									"    });",
+									"});"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/{{apiVersionSystem}}/{{envrironment}}/api/v2.0/companies?$select=id,name",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"{{apiVersionSystem}}",
+								"{{envrironment}}",
+								"api",
+								"v2.0",
+								"companies"
+							],
+							"query": [
+								{
+									"key": "$select",
+									"value": "id,name"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Quality",
+			"item": [
+				{
+					"name": "Metadata",
+					"item": [
+						{
+							"name": "Quality APIs Metadata",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											""
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "",
+										"value": "",
+										"type": "text",
+										"disabled": true
+									}
+								],
+								"url": {
+									"raw": "{{url}}/{{apiVersionSystem}}/{{envrironment}}/api/{{apiPublisher}}/{{apiGroup}}/v1.0/$metadata",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"{{apiVersionSystem}}",
+										"{{envrironment}}",
+										"api",
+										"{{apiPublisher}}",
+										"{{apiGroup}}",
+										"v1.0",
+										"$metadata"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Instruction Group",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/{{apiVersionSystem}}/{{envrironment}}/api/{{apiPublisher}}/{{apiGroup}}/v1.0/companies({{companyId}})/instructionGroups",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"{{apiVersionSystem}}",
+								"{{envrironment}}",
+								"api",
+								"{{apiPublisher}}",
+								"{{apiGroup}}",
+								"v1.0",
+								"companies({{companyId}})",
+								"instructionGroups"
+							],
+							"query": [
+								{
+									"key": "$top",
+									"value": "2",
+									"disabled": true
+								},
+								{
+									"key": "$expand",
+									"value": "instructionLines",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Instruction Headers",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/{{apiVersionSystem}}/{{envrironment}}/api/{{apiPublisher}}/{{apiGroup}}/v1.0/companies({{companyId}})/instructionHeaders",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"{{apiVersionSystem}}",
+								"{{envrironment}}",
+								"api",
+								"{{apiPublisher}}",
+								"{{apiGroup}}",
+								"v1.0",
+								"companies({{companyId}})",
+								"instructionHeaders"
+							],
+							"query": [
+								{
+									"key": "$top",
+									"value": "2",
+									"disabled": true
+								},
+								{
+									"key": "$expand",
+									"value": "instructionLines",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Instruction Lines",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/{{apiVersionSystem}}/{{envrironment}}/api/{{apiPublisher}}/{{apiGroup}}/v1.0/companies({{companyId}})/instructionLines",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"{{apiVersionSystem}}",
+								"{{envrironment}}",
+								"api",
+								"{{apiPublisher}}",
+								"{{apiGroup}}",
+								"v1.0",
+								"companies({{companyId}})",
+								"instructionLines"
+							],
+							"query": [
+								{
+									"key": "$top",
+									"value": "2",
+									"disabled": true
+								},
+								{
+									"key": "$expand",
+									"value": "instructionLines",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Measure Header",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/{{apiVersionSystem}}/{{envrironment}}/api/{{apiPublisher}}/{{apiGroup}}/v1.0/companies({{companyId}})/measureHeaders",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"{{apiVersionSystem}}",
+								"{{envrironment}}",
+								"api",
+								"{{apiPublisher}}",
+								"{{apiGroup}}",
+								"v1.0",
+								"companies({{companyId}})",
+								"measureHeaders"
+							],
+							"query": [
+								{
+									"key": "$top",
+									"value": "2",
+									"disabled": true
+								},
+								{
+									"key": "$expand",
+									"value": "instructionLines",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Measure Line",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/{{apiVersionSystem}}/{{envrironment}}/api/{{apiPublisher}}/{{apiGroup}}/v1.0/companies({{companyId}})/measureLines",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"{{apiVersionSystem}}",
+								"{{envrironment}}",
+								"api",
+								"{{apiPublisher}}",
+								"{{apiGroup}}",
+								"v1.0",
+								"companies({{companyId}})",
+								"measureLines"
+							],
+							"query": [
+								{
+									"key": "$top",
+									"value": "2",
+									"disabled": true
+								},
+								{
+									"key": "$expand",
+									"value": "instructionLines",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"auth": {
+		"type": "oauth2",
+		"oauth2": [
+			{
+				"key": "grant_type",
+				"value": "client_credentials",
+				"type": "string"
+			},
+			{
+				"key": "refreshTokenUrl",
+				"value": "https://login.microsoftonline.com/{{entraTenantID}}/oauth2/v2.0/token",
+				"type": "string"
+			},
+			{
+				"key": "scope",
+				"value": "https://api.businesscentral.dynamics.com/.default ",
+				"type": "string"
+			},
+			{
+				"key": "accessTokenUrl",
+				"value": "https://login.microsoftonline.com/{{entraTenantID}}/oauth2/v2.0/token",
+				"type": "string"
+			},
+			{
+				"key": "authUrl",
+				"value": "https://login.microsoftonline.com/{{entraTenantID}}/oauth2/v2.0/authorize",
+				"type": "string"
+			},
+			{
+				"key": "clientSecret",
+				"value": "{{client_secret}}",
+				"type": "string"
+			},
+			{
+				"key": "tokenName",
+				"value": "BC Token",
+				"type": "string"
+			},
+			{
+				"key": "clientId",
+				"value": "{{client_id}}",
+				"type": "string"
+			},
+			{
+				"key": "redirect_uri",
+				"value": "https://businesscentral.dynamics.com/OAuthLanding.htm",
+				"type": "string"
+			},
+			{
+				"key": "client_authentication",
+				"value": "header",
+				"type": "string"
+			},
+			{
+				"key": "addTokenTo",
+				"value": "header",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	]
+}
