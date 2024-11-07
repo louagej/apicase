@@ -1,0 +1,45 @@
+{
+  "id": "38e08be5-a6b9-4de3-acfe-444382393b8c",
+  "name": "API Case",
+  "publisher": "9altitudes",
+  "version": "1.0.0.0",
+  "brief": "",
+  "description": "",
+  "privacyStatement": "",
+  "EULA": "",
+  "help": "",
+  "url": "",
+  "logo": "",
+  "dependencies": [
+    {
+      "id": "10cb69d9-bc8a-4d27-970a-9e110e9db2a5",
+      "name": "_Exclude_APIV2_",
+      "publisher": "Microsoft",
+      "version": "17.4.0.0"
+    },
+    {
+      "id": "676d4534-49bb-43ad-9656-cdc04ed154ef",
+      "name": "9A Advanced Manufacturing – Quality mgt.",
+      "publisher": "9altitudes",
+      "version": "23.0.0.0"
+    }
+  ],
+  "screenshots": [],
+  "platform": "1.0.0.0",
+  "application": "24.4.0.0",
+  "idRanges": [
+    {
+      "from": 50000,
+      "to": 50095
+    }
+  ],
+  "features": ["NoImplicitWith", "TranslationFile"],
+  "resourceExposurePolicy": {
+    "allowDebugging": true,
+    "allowDownloadingSource": false,
+    "includeSourceInSymbolFile": false
+  },
+  "supportedLocales": ["nl-BE"],
+  "runtime": "13.0",
+  "applicationInsightsConnectionString": ""
+}
