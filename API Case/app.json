@@ -11,18 +11,6 @@
   "url": "",
   "logo": "",
   "dependencies": [
-    {
-      "id": "10cb69d9-bc8a-4d27-970a-9e110e9db2a5",
-      "name": "_Exclude_APIV2_",
-      "publisher": "Microsoft",
-      "version": "17.4.0.0"
-    },
-    {
-      "id": "676d4534-49bb-43ad-9656-cdc04ed154ef",
-      "name": "9A Advanced Manufacturing – Quality mgt.",
-      "publisher": "9altitudes",
-      "version": "23.0.0.0"
-    }
   ],
   "screenshots": [],
   "platform": "25.0.0.0",
