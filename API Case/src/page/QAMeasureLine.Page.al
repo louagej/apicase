@@ -1,4 +1,4 @@
-page 50037 "PTE_QA Measure Line"
+page 62018 "PTE_QA Measure Line"
 {
     APIGroup = 'apicase';
     APIPublisher = 'ninealtitudes';
@@ -30,10 +30,10 @@ page 50037 "PTE_QA Measure Line"
                 {
                     Caption = 'Line No.';
                 }
-                field(measureType; Rec."Measure Type")
+                /* field(measureType; Rec."Measure Type")
                 {
                     Caption = 'Measure Type';
-                }
+                } */
                 field(measureTypeCode; Rec."Measure Type Code")
                 {
                     Caption = 'Measure Type Code';

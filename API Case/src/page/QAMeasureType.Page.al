@@ -1,4 +1,4 @@
-page 50032 "PTE_QA Measure Type"
+page 62013 "PTE_QA Measure Type"
 {
     APIGroup = 'apicase';
     APIPublisher = 'ninealtitudes';
