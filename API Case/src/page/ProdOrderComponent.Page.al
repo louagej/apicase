@@ -1,4 +1,4 @@
-page 50004 "PTE_Prod. Order Component"
+page 62000 "PTE_Prod. Order Component"
 {
     APIGroup = 'apicase';
     APIPublisher = 'ninealtitudes';

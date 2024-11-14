@@ -1,4 +1,4 @@
-page 50030 "PTE_QA Instruction Group"
+page 62011 "PTE_QA Instruction Group"
 {
     APIGroup = 'apicase';
     APIPublisher = 'ninealtitudes';

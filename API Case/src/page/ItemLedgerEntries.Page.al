@@ -1,4 +1,4 @@
-page 50027 "PTE_Item Ledger Entries"
+page 62010 "PTE_Item Ledger Entries"
 {
     EntityCaption = 'Item Ledger Entry';
     EntitySetCaption = 'Item Ledger Entries';

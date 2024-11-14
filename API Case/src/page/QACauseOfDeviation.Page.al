@@ -1,4 +1,4 @@
-page 50040 "PTE_QA Cause Of Deviation"
+page 62021 "PTE_QA Cause Of Deviation"
 {
     APIGroup = 'apicase';
     APIPublisher = 'ninealtitudes';

@@ -1,4 +1,4 @@
-page 50013 "PTE_Production Orders"
+page 62002 "PTE_Production Orders"
 {
     PageType = API;
     Caption = 'Production Orders';

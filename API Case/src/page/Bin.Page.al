@@ -1,4 +1,4 @@
-page 50011 PTE_Bin
+page 62001 PTE_Bin
 {
     APIGroup = 'apicase';
     APIPublisher = 'ninealtitudes';

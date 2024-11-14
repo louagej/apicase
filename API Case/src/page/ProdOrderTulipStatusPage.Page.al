@@ -1,4 +1,4 @@
-page 50017 "PTE_ProdOrderTulipStatus.Page"
+page 62003 "PTE_ProdOrderTulipStatus.Page"
 {
     APIGroup = 'apicase';
     APIPublisher = 'ninealtitudes';

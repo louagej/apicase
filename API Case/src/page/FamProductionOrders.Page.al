@@ -1,4 +1,4 @@
-page 50020 "PTE_Fam. Production Orders"
+page 62005 "PTE_Fam. Production Orders"
 {
     APIGroup = 'apicase';
     APIPublisher = 'ninealtitudes';

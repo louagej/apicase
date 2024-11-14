@@ -1,4 +1,4 @@
-page 50022 "PTE_Adjust Bin Content"
+page 62007 "PTE_Adjust Bin Content"
 {
     APIGroup = 'apicase';
     APIPublisher = 'ninealtitudes';
