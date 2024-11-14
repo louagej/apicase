@@ -41,5 +41,5 @@
   },
   "supportedLocales": ["nl-BE"],
   "runtime": "14.0",
-  "applicationInsightsConnectionString": "InstrumentationKey=5ec52108-8a6b-44da-8731-6754f59737c8;IngestionEndpoint=https://westeurope-5.in.applicationinsights.azure.com/;LiveEndpoint=https://westeurope.livediagnostics.monitor.azure.com/;ApplicationId=589fb7f5-89df-4e39-a717-0c1240b03ee8"
+  "applicationInsightsConnectionString": ""
 }
