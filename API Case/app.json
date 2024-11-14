@@ -1,8 +1,8 @@
 {
-  "id": "38e08be5-a6b9-4de3-acfe-444382393b8c",
+  "id": "afcfa668-50ba-413e-9f44-952b566cc406",
   "name": "API Case",
-  "publisher": "9altitudes",
-  "version": "2.0.0.0",
+  "publisher": "Job",
+  "version": "2.0.1.0",
   "brief": "",
   "description": "",
   "privacyStatement": "",
@@ -29,8 +29,8 @@
   "application": "25.0.0.0",
   "idRanges": [
     {
-      "from": 50000,
-      "to": 50095
+      "from": 62000,
+      "to": 62095
     }
   ],
   "features": ["NoImplicitWith", "TranslationFile"],
@@ -41,5 +41,5 @@
   },
   "supportedLocales": ["nl-BE"],
   "runtime": "14.0",
-  "applicationInsightsConnectionString": ""
+  "applicationInsightsConnectionString": "InstrumentationKey=5ec52108-8a6b-44da-8731-6754f59737c8;IngestionEndpoint=https://westeurope-5.in.applicationinsights.azure.com/;LiveEndpoint=https://westeurope.livediagnostics.monitor.azure.com/;ApplicationId=589fb7f5-89df-4e39-a717-0c1240b03ee8"
 }
