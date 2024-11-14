@@ -1,6 +1,7 @@
 page 62001 "Job Item Unit of Measure"
 {
     APIGroup = 'myFirstGroup';
+    //APIGroup = 'mySecondGroup';
     APIPublisher = 'job';
     APIVersion = 'v1.0';
     ApplicationArea = All;
