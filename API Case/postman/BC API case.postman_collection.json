@@ -63,13 +63,13 @@
 			]
 		},
 		{
-			"name": "Quality",
+			"name": "myFirstGroup",
 			"item": [
 				{
 					"name": "Metadata",
 					"item": [
 						{
-							"name": "Quality APIs Metadata",
+							"name": "myFirstGroup API",
 							"event": [
 								{
 									"listen": "test",
@@ -93,7 +93,7 @@
 									}
 								],
 								"url": {
-									"raw": "{{url}}/{{apiVersionSystem}}/{{envrironment}}/api/{{apiPublisher}}/{{apiGroup}}/v1.0/$metadata",
+									"raw": "{{url}}/{{apiVersionSystem}}/{{envrironment}}/api/job/myFirstGroup/v1.0",
 									"host": [
 										"{{url}}"
 									],
@@ -101,10 +101,9 @@
 										"{{apiVersionSystem}}",
 										"{{envrironment}}",
 										"api",
-										"{{apiPublisher}}",
-										"{{apiGroup}}",
-										"v1.0",
-										"$metadata"
+										"job",
+										"myFirstGroup",
+										"v1.0"
 									]
 								}
 							},
@@ -113,7 +112,7 @@
 					]
 				},
 				{
-					"name": "Instruction Group",
+					"name": "item Type",
 					"event": [
 						{
 							"listen": "test",
@@ -130,7 +129,7 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{url}}/{{apiVersionSystem}}/{{envrironment}}/api/{{apiPublisher}}/{{apiGroup}}/v1.0/companies({{companyId}})/instructionGroups",
+							"raw": "{{url}}/{{apiVersionSystem}}/{{envrironment}}/api/job/myFirstGroup/v1.0/companies({{companyId}})/itemTypes?$top=5",
 							"host": [
 								"{{url}}"
 							],
@@ -138,22 +137,16 @@
 								"{{apiVersionSystem}}",
 								"{{envrironment}}",
 								"api",
-								"{{apiPublisher}}",
-								"{{apiGroup}}",
+								"job",
+								"myFirstGroup",
 								"v1.0",
 								"companies({{companyId}})",
-								"instructionGroups"
+								"itemTypes"
 							],
 							"query": [
 								{
 									"key": "$top",
-									"value": "2",
-									"disabled": true
-								},
-								{
-									"key": "$expand",
-									"value": "instructionLines",
-									"disabled": true
+									"value": "5"
 								}
 							]
 						}
@@ -161,7 +154,7 @@
 					"response": []
 				},
 				{
-					"name": "Instruction Headers",
+					"name": "Job Items",
 					"event": [
 						{
 							"listen": "test",
@@ -178,7 +171,7 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{url}}/{{apiVersionSystem}}/{{envrironment}}/api/{{apiPublisher}}/{{apiGroup}}/v1.0/companies({{companyId}})/instructionHeaders",
+							"raw": "{{url}}/{{apiVersionSystem}}/{{envrironment}}/api/job/myFirstGroup/v1.0/companies({{companyId}})/jobItems?$top=5",
 							"host": [
 								"{{url}}"
 							],
@@ -186,22 +179,16 @@
 								"{{apiVersionSystem}}",
 								"{{envrironment}}",
 								"api",
-								"{{apiPublisher}}",
-								"{{apiGroup}}",
+								"job",
+								"myFirstGroup",
 								"v1.0",
 								"companies({{companyId}})",
-								"instructionHeaders"
+								"jobItems"
 							],
 							"query": [
 								{
 									"key": "$top",
-									"value": "2",
-									"disabled": true
-								},
-								{
-									"key": "$expand",
-									"value": "instructionLines",
-									"disabled": true
+									"value": "5"
 								}
 							]
 						}
@@ -209,7 +196,7 @@
 					"response": []
 				},
 				{
-					"name": "Instruction Lines",
+					"name": "Item Variants",
 					"event": [
 						{
 							"listen": "test",
@@ -226,7 +213,7 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{url}}/{{apiVersionSystem}}/{{envrironment}}/api/{{apiPublisher}}/{{apiGroup}}/v1.0/companies({{companyId}})/instructionLines",
+							"raw": "{{url}}/{{apiVersionSystem}}/{{envrironment}}/api/job/myFirstGroup/v1.0/companies({{companyId}})/itemVariants?$top=5",
 							"host": [
 								"{{url}}"
 							],
@@ -234,78 +221,75 @@
 								"{{apiVersionSystem}}",
 								"{{envrironment}}",
 								"api",
-								"{{apiPublisher}}",
-								"{{apiGroup}}",
+								"job",
+								"myFirstGroup",
 								"v1.0",
 								"companies({{companyId}})",
-								"instructionLines"
+								"itemVariants"
 							],
 							"query": [
 								{
 									"key": "$top",
-									"value": "2",
-									"disabled": true
-								},
-								{
-									"key": "$expand",
-									"value": "instructionLines",
-									"disabled": true
+									"value": "5"
 								}
 							]
 						}
 					},
 					"response": []
-				},
+				}
+			]
+		},
+		{
+			"name": "mySecondGroup",
+			"item": [
 				{
-					"name": "Measure Header",
-					"event": [
+					"name": "Metadata",
+					"item": [
 						{
-							"listen": "test",
-							"script": {
-								"exec": [
-									""
-								],
-								"type": "text/javascript",
-								"packages": {}
-							}
-						}
-					],
-					"request": {
-						"method": "GET",
-						"header": [],
-						"url": {
-							"raw": "{{url}}/{{apiVersionSystem}}/{{envrironment}}/api/{{apiPublisher}}/{{apiGroup}}/v1.0/companies({{companyId}})/measureHeaders",
-							"host": [
-								"{{url}}"
-							],
-							"path": [
-								"{{apiVersionSystem}}",
-								"{{envrironment}}",
-								"api",
-								"{{apiPublisher}}",
-								"{{apiGroup}}",
-								"v1.0",
-								"companies({{companyId}})",
-								"measureHeaders"
-							],
-							"query": [
+							"name": "myFirstGroup API",
+							"event": [
 								{
-									"key": "$top",
-									"value": "2",
-									"disabled": true
-								},
-								{
-									"key": "$expand",
-									"value": "instructionLines",
-									"disabled": true
+									"listen": "test",
+									"script": {
+										"exec": [
+											""
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
 								}
-							]
+							],
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "",
+										"value": "",
+										"type": "text",
+										"disabled": true
+									}
+								],
+								"url": {
+									"raw": "{{url}}/{{apiVersionSystem}}/{{envrironment}}/api/job/mySecondGroup/v1.0",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"{{apiVersionSystem}}",
+										"{{envrironment}}",
+										"api",
+										"job",
+										"mySecondGroup",
+										"v1.0"
+									]
+								}
+							},
+							"response": []
 						}
-					},
-					"response": []
+					]
 				},
 				{
-					"name": "Measure Line",
+					"name": "item Type",
 					"event": [
 						{
 							"listen": "test",
@@ -322,7 +306,7 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{url}}/{{apiVersionSystem}}/{{envrironment}}/api/{{apiPublisher}}/{{apiGroup}}/v1.0/companies({{companyId}})/measureLines",
+							"raw": "{{url}}/{{apiVersionSystem}}/{{envrironment}}/api/job/mySecondGroup/v1.0/companies({{companyId}})/itemTypes?$top=5",
 							"host": [
 								"{{url}}"
 							],
@@ -330,22 +314,16 @@
 								"{{apiVersionSystem}}",
 								"{{envrironment}}",
 								"api",
-								"{{apiPublisher}}",
-								"{{apiGroup}}",
+								"job",
+								"mySecondGroup",
 								"v1.0",
 								"companies({{companyId}})",
-								"measureLines"
+								"itemTypes"
 							],
 							"query": [
 								{
 									"key": "$top",
-									"value": "2",
-									"disabled": true
-								},
-								{
-									"key": "$expand",
-									"value": "instructionLines",
-									"disabled": true
+									"value": "5"
 								}
 							]
 						}
